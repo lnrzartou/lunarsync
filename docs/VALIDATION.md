@@ -4,7 +4,17 @@
 - Le canal est configuré pour les releases publiques de lnrzartou/lunarsync, avec une clé publique embarquée et une liste limitée de domaines HTTPS.
 - Le script de publication construit, signe, vérifie puis publie les fichiers après téléversement complet d’une release en brouillon.
 - La clé privée de production est hors du projet et n’entre pas dans les fichiers distribués.
-- Les contrôles en ligne et le parcours complet de mise à jour doivent être relevés après la publication de la release.
+- Release publique v1.2.0 publiée : quatre fichiers dans l’état uploaded, brouillon désactivé.
+- Téléchargement public sans authentification du manifeste puis du ZIP depuis le canal GitHub : réussi, redirections limitées aux domaines autorisés.
+- Signature du manifeste, version 1.2.0, séquence 1791388050, taille et SHA-256 du ZIP téléchargé : vérifiés avec le même code de sécurité que le client. Le ZIP en ligne est identique au paquet local.
+- Empreintes retournées par GitHub pour l’installateur, le ZIP et le manifeste : identiques aux fichiers locaux.
+- ZIP inspecté : canal configuré vers lnrzartou/lunarsync et aucun fichier de clé privée inclus.
+- Canal de confiance copié dans l’installation locale 1.1. L’application ouverte n’a pas été interrompue ; elle recharge ce canal au prochain lancement complet.
+- Le remplacement complet et le redémarrage via le bouton de mise à jour restent à vérifier dans l’interface. La validation réseau ne remplace pas cet essai.
+
+SHA-256 du paquet public : 433A6E2439350D743BF01EFE9395E553F995D3851470832B7CBA95B070595788.
+
+Le manifeste actuel expire le 21 novembre 2026 à 16 h 49, heure de Paris. Une publication de maintenance avec un nouveau numéro renouvelle les dates ; après expiration, l’application reste utilisable mais refuse ce manifeste ancien.
 
 ## Validation précédente : 1.1.0
 
