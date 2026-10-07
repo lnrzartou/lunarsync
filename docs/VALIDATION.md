@@ -1,4 +1,14 @@
-# Validation de LunarSync 1.2.0 — 7 octobre 2026
+# Validation de LunarSync 1.2.1 — 7 octobre 2026
+
+- Compilation Release Windows x64 de l’application, de l’installateur et de l’outil de publication : réussie.
+- 39 tests existants passent, aucun échec.
+- Le panneau en jeu utilise le vert pour les macros activées et le rouge pour les macros configurées mais désactivées. Le cas non configuré reste prioritaire et conserve sa couleur neutre ; le maintien conserve le vert.
+- L’aperçu du panneau reprend les mêmes couleurs. Les essais visuels dans la session utilisateur restent à faire.
+- Release signée v1.2.1 publiée sur GitHub ; le manifeste public annonce la séquence 1791398994 et sa signature a été vérifiée.
+- Téléchargement complet sans authentification depuis le canal public : réussi. Signature, taille et SHA-256 vérifiés ; ZIP identique au paquet local. Les quatre empreintes de fichiers retournées par GitHub correspondent aux fichiers locaux.
+- Le manifeste 1.2.1 expire le 21 novembre 2026 à 19 h 50, heure de Paris. Le remplacement et le redémarrage depuis l’interface restent à vérifier par l’utilisateur.
+
+## Validation précédente : 1.2.0
 
 - 39 tests automatisés passent, dont le chargement et la signature avec une clé Windows chiffrée, le refus d’écrasement et le rejet d’un fichier de clé altéré.
 - Le canal est configuré pour les releases publiques de lnrzartou/lunarsync, avec une clé publique embarquée et une liste limitée de domaines HTTPS.
@@ -14,7 +24,7 @@
 
 SHA-256 du paquet public : 433A6E2439350D743BF01EFE9395E553F995D3851470832B7CBA95B070595788.
 
-Le manifeste actuel expire le 21 novembre 2026 à 16 h 49, heure de Paris. Une publication de maintenance avec un nouveau numéro renouvelle les dates ; après expiration, l’application reste utilisable mais refuse ce manifeste ancien.
+Le manifeste de la version 1.2.0 expire le 21 novembre 2026 à 16 h 49, heure de Paris. Une publication de maintenance avec un nouveau numéro renouvelle les dates ; après expiration, l’application reste utilisable mais refuse ce manifeste ancien.
 
 ## Validation précédente : 1.1.0
 
