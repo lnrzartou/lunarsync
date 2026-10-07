@@ -6,6 +6,7 @@ using LunarSync.Core;
 namespace LunarSync;
 internal sealed class GamePanel : Window
 {
+    private static readonly System.Windows.Media.Brush EnabledColor=Ui.Brush("#75D69A"),DisabledColor=Ui.Brush("#F08080");
     private readonly AppServices services;
     private readonly Dictionary<string,(TextBlock Status,TextBlock Info)> rows=[];
     private readonly DispatcherTimer timer=new(){Interval=TimeSpan.FromMilliseconds(120)};
@@ -39,7 +40,7 @@ internal sealed class GamePanel : Window
         {
             var row=rows[status.Id];var c=services.ActiveMacros.Single(c=>c.Id==status.Id);
             row.Status.Text=!status.Configured?"À CONFIGURER":status.Holding?"MAINTENU":status.Enabled?"ACTIVÉE":"DÉSACTIVÉE";
-            row.Status.Foreground=status.Enabled?Ui.Brush("#8DB5DA"):Ui.Muted;
+            row.Status.Foreground=!status.Configured?Ui.Muted:status.Enabled?EnabledColor:DisabledColor;
             row.Info.Text=Keys.Name(c.ToggleKey)+" pour activer  ·  "+Keys.Name(c.BaseKey)+(status.Cycles>0?"  ·  "+status.Cycles+" actions":"");
         }
     }

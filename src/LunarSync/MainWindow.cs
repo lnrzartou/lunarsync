@@ -214,7 +214,7 @@ public sealed class MainWindow : Window
         var p=Page("Garde le contrôle.","Un panneau indépendant à placer sur ton deuxième écran.");
         var demo=new StackPanel();demo.Children.Add(Ui.Text("LUNARSYNC  /  EN JEU",11,"#A5A7AE",true));demo.Children.Add(Ui.Space(24));
         foreach(var name in new[]{"Activée","Désactivée","Non configurée"})
-        {var row=Ui.Row(Ui.Text("●  "+name,17,name=="Activée"?"#8DB5DA":name=="Désactivée"?"#F4EFE3":"#808792"),Ui.Text(name=="Activée"?"Mode prêt":"—",13,"#A5A7AE"));row.Margin=new(0,0,0,18);demo.Children.Add(row);}
+        {var row=Ui.Row(Ui.Text("●  "+name,17,name=="Activée"?"#75D69A":name=="Désactivée"?"#F08080":"#808792"),Ui.Text(name=="Activée"?"Mode prêt":"—",13,"#A5A7AE"));row.Margin=new(0,0,0,18);demo.Children.Add(row);}
         demo.Children.Add(Ui.Text("Le panneau affiche l’état réel de toutes les macros et les appuis en cours.",13,"#A5A7AE"));p.Children.Add(Ui.Card(demo));p.Children.Add(Ui.Space(24));
         p.Children.Add(Ui.Button("Ouvrir le panneau en jeu",OpenPanel,true));p.Children.Add(Ui.Space(12));p.Children.Add(Ui.Text("Déplace la fenêtre sur l’écran de ton choix. Tu peux aussi la garder au premier plan.",13,"#A5A7AE"));return new ScrollViewer{Content=p};
     }

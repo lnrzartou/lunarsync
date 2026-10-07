@@ -2,19 +2,19 @@
 
 <p><img src="assets/lunarsync-logo.png" alt="Logo LunarSync" width="100"></p>
 
-**[Télécharger l’installateur Windows 1.2](https://github.com/lnrzartou/lunarsync/releases/download/v1.2.0/LunarSync-Setup-1.2.0-win-x64.exe)** · **[Dernière version](https://github.com/lnrzartou/lunarsync/releases/latest)**
+**[Télécharger l’installateur Windows 1.2.1](https://github.com/lnrzartou/lunarsync/releases/download/v1.2.1/LunarSync-Setup-1.2.1-win-x64.exe)** · **[Dernière version](https://github.com/lnrzartou/lunarsync/releases/latest)**
 
 Un panneau de macros préparées par Lunar : dix configurations, aperçu du clavier, statistiques et suivi sur un deuxième écran.
 
-Application Windows de macros prédéfinies, créée pour Lunar. Version 1.2.0.
+Application Windows de macros prédéfinies, créée pour Lunar. Version 1.2.1.
 
 ## Utiliser et partager
 
-Le fichier à envoyer aux amis est `distribution/LunarSync-Setup-1.2.0-win-x64.exe`. Il contient le logiciel et son environnement .NET : aucun AutoHotkey ni SDK n’est nécessaire chez eux. Cible de cette version : Windows 10/11 sur processeur x64. Une compilation ARM64 est prévue par le script de construction, mais cette livraison x64 n’a pas été testée sur ARM64.
+Le fichier à envoyer aux amis est `distribution/LunarSync-Setup-1.2.1-win-x64.exe`. Il contient le logiciel et son environnement .NET : aucun AutoHotkey ni SDK n’est nécessaire chez eux. Cible de cette version : Windows 10/11 sur processeur x64. Une compilation ARM64 est prévue par le script de construction, mais cette livraison x64 n’a pas été testée sur ARM64.
 
 L’installation se fait pour l’utilisateur courant, dans `%LOCALAPPDATA%\Programs\LunarSync`, avec un raccourci dans le menu Démarrer et, au choix, sur le Bureau. L’option « Lancer LunarSync avec Windows » est cochée par défaut dans l’installateur et peut être modifiée dans Système. L’application démarre discrètement dans la zone de notification, avec les modes désactivés. Aucun service ni modification du firmware clavier. La désinstallation retire aussi le démarrage automatique ; les préférences et compteurs sont conservés.
 
-Le ZIP `distribution/LunarSync-1.2.0-win-x64.zip` est la version portable et le paquet utilisé pour préparer les mises à jour. Il faut extraire tout le ZIP avant de lancer `LunarSync.exe`. Les mises à jour automatiques s’appliquent aux installations faites par l’installateur.
+Le ZIP `distribution/LunarSync-1.2.1-win-x64.zip` est la version portable et le paquet utilisé pour préparer les mises à jour. Il faut extraire tout le ZIP avant de lancer `LunarSync.exe`. Les mises à jour automatiques s’appliquent aux installations faites par l’installateur.
 
 ## Premiers réglages
 
@@ -79,7 +79,7 @@ Pour les versions 1.0 et 1.1 distribuées avec le canal désactivé, installer u
 Prérequis de compilation : SDK .NET 10 pour Windows, PowerShell. Aucun paquet tiers n’est nécessaire au moteur de macros ou à la vérification des signatures.
 
 ```powershell
-.\build.ps1 -Version 1.2.0 -Runtime win-x64
+.\build.ps1 -Version 1.2.1 -Runtime win-x64
 ```
 
 Le script exécute les tests, publie l’application autonome, prépare le ZIP, produit l’installateur et l’outil de signature `tools/publisher/LunarSync.Release.exe`.
