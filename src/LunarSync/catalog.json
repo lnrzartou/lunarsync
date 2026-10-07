@@ -1,0 +1,65 @@
+[
+  {
+    "id": "repeat-f-click",
+    "name": "Autoedit / Edit",
+    "description": "Enchaîne rapidement l’édition, la sélection et la confirmation jusqu’à l’arrêt. Un effet amusant à essayer, sans intérêt en partie normale. La confirmation dépend des réglages d’édition du jeu.",
+    "kind": "KeyAndClick",
+    "defaultBase": 70,
+    "defaultToggle": 33,
+    "defaultCps": 30
+  },
+  {
+    "id": "repeat-e",
+    "name": "Ramassage automatique",
+    "description": "Répète la touche de ramassage pour tenter de récupérer une arme plus rapidement. Nous déconseillons et n’encourageons pas son utilisation dans Fortnite : automatiser ces actions est contraire aux règles du jeu.",
+    "kind": "Key",
+    "defaultBase": 69,
+    "defaultToggle": 34,
+    "defaultCps": 35
+  },
+  {
+    "id": "hold-mouse4",
+    "name": "Autobuild mur",
+    "description": "Associe la touche de mur sélectionnée au clic gauche pour construire en un appui. Le clic suit son maintien et son relâchement. Associe la même touche au mur dans le jeu.",
+    "kind": "Hold",
+    "defaultBase": 5,
+    "defaultToggle": 40,
+    "defaultCps": 35
+  },
+  {
+    "id": "hold-mouse5",
+    "name": "Autobuild escalier",
+    "description": "Associe la touche d’escalier sélectionnée au clic gauche pour construire en un appui. Le clic suit son maintien et son relâchement. Associe la même touche à l’escalier dans le jeu.",
+    "kind": "Hold",
+    "defaultBase": 6,
+    "defaultToggle": 40,
+    "defaultCps": 35
+  },
+  {
+    "id": "hold-x",
+    "name": "Autobuild sol",
+    "description": "Associe la touche de sol sélectionnée au clic gauche pour construire en un appui. Le clic suit son maintien et son relâchement. Associe la même touche au sol dans le jeu.",
+    "kind": "Hold",
+    "defaultBase": 88,
+    "defaultToggle": 40,
+    "defaultCps": 35
+  },
+  {
+    "id": "hold-c",
+    "name": "Autobuild cône",
+    "description": "Associe la touche de cône sélectionnée au clic gauche pour construire en un appui. Le clic suit son maintien et son relâchement. Associe la même touche au cône dans le jeu.",
+    "kind": "Hold",
+    "defaultBase": 67,
+    "defaultToggle": 40,
+    "defaultCps": 35
+  },
+  {
+    "id": "hold-f",
+    "name": "Drag macro",
+    "description": "Ouvre l’édition avec la touche choisie et maintient le clic gauche pour sélectionner les cases par glissement. Relâcher la touche relâche le clic ; la confirmation automatique nécessite le réglage correspondant dans le jeu.",
+    "kind": "Hold",
+    "defaultBase": 70,
+    "defaultToggle": 38,
+    "defaultCps": 35
+  }
+]

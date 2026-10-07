@@ -1,0 +1,48 @@
+LUNARSYNC — VERSION 1.2.0
+
+INSTALLER / PARTAGER
+Le fichier LunarSync-Setup-1.2.0-win-x64.exe suffit pour tes amis.
+Compatible Windows 10/11 x64. AutoHotkey et .NET n’ont pas à être installés.
+Le ZIP Portable doit être entièrement extrait avant de lancer LunarSync.exe.
+
+DIX CONFIGURATIONS
+Choisis 01 à 10 dans Macros ou Clavier, puis configure les macros voulues.
+Chaque configuration possède ses propres touches et délais.
+Changer de configuration coupe tous les modes. Une configuration vide
+ne déclenche aucune macro. Les anciens réglages migrent dans la 01.
+
+EN ARRIÈRE-PLAN
+La croix masque la fenêtre et laisse les macros fonctionner.
+L’icône près de l’horloge permet de rouvrir le panneau ou de quitter.
+Relancer le raccourci rouvre la même instance.
+« Quitter LunarSync » arrête réellement le logiciel.
+Le démarrage Windows est activé par défaut dans l’installateur et réglable
+dans Système. Les modes démarrent désactivés, même au démarrage Windows.
+Ctrl + Alt + F12 désactive toutes les macros.
+
+STATISTIQUES ET RÉGLAGES
+Statistiques affiche les appuis liés aux macros, les clics gauches, les
+utilisations par macro et la RAM du logiciel. Les compteurs sont locaux.
+Un maintien F + clic gauche compte une pression F et une pression gauche.
+L’autorépétition du clavier et les relâchements ne sont pas ajoutés.
+Les réglages montrent le parcours des actions et les délais conseillés.
+La confirmation d’édition dépend des réglages du jeu.
+
+Ferme les anciens scripts AutoHotkey avant d’utiliser ici les mêmes raccourcis.
+AutoHotkey servait aux premiers scripts ; LunarSync a maintenant son propre
+moteur natif. L’onglet Système l’explique.
+
+MISES À JOUR
+Le canal signé est activé sur GitHub Releases :
+https://github.com/lnrzartou/lunarsync/releases/latest
+LunarSync recherche les mises à jour au lancement puis toutes les six heures.
+Le bouton « Mettre à jour et redémarrer » vérifie puis installe la version.
+Aucun serveur ne tourne sur ton PC. Voir Guides/PUBLICATION-SECURISEE.md.
+Dans ce guide, les chemins du projet se lisent depuis Sources.
+L’outil de signature est aussi fourni dans Outils-publication.
+Aucune clé privée n’est incluse dans cette livraison. La clé de publication
+de Lunar est conservée hors du projet, chiffrée par son compte Windows.
+
+L’installateur n’a pas de certificat d’éditeur Windows. La signature des
+mises à jour est un mécanisme différent. Ne désactive pas ton antivirus.
+Sources et détails des vérifications : Sources et Guides/VALIDATION.md.

@@ -1,0 +1,5 @@
+LunarSync logo — generated with the built-in image_gen tool.
+
+Use case: logo-brand. Asset type: finished Windows desktop application icon for LunarSync, a keyboard and mouse shortcut application. Create one exceptionally crisp flat emblem, no wordmark or letters, a sculpted crescent moon merging subtly with two opposing synchronization arcs, simple confident silhouette readable at 32 pixels. Centered square composition with generous transparent padding. Palette strictly warm cream (#F4EFE3), deep navy blue (#16375C), and near black (#101114), with cream dominant to work on a dark background. Elegant restrained modern desktop software identity, balanced geometric construction, flat colors, sharp smooth edges. No neon, no glow, no gradients, no 3D, no shadows, no mockup, no text, no watermark. Transparent background.
+
+The PNG is the generated original. lunarsync.ico is a format/size conversion for the Windows application icon.

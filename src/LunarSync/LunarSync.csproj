@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationIcon>../../assets/lunarsync.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>LunarSync</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../LunarSync.Core/LunarSync.Core.csproj" />
+    <Resource Include="../../assets/lunarsync-logo.png" Link="Assets/logo.png" />
+    <Content Include="catalog.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="update-channel.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

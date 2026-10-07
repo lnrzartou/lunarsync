@@ -1,0 +1,10 @@
+{
+  "configured": true,
+  "manifestUrl": "https://github.com/lnrzartou/lunarsync/releases/latest/download/release.json",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEG+N5vFPdwCvoM7wn5g2ChU3tTVFl\nIott7AOTcqswW7LZ9FQHQ7yiFFTTwMNKVo8K8sxQISUnnKmc/Ii9ejDejg==\n-----END PUBLIC KEY-----",
+  "allowedHosts": [
+    "github.com",
+    "release-assets.githubusercontent.com"
+  ],
+  "channel": "stable"
+}

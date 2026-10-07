@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+distribution/
+tools/publisher/
+*-private.pem
+*.pfx
+*.p12
+*.key
+release-secrets/
+*.dpapi
+*.private.*
+*.log
+.vs/

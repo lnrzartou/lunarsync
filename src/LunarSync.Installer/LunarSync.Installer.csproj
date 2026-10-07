@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup><OutputType>WinExe</OutputType><UseWPF>true</UseWPF><AssemblyName>LunarSync-Setup</AssemblyName><ApplicationIcon>../../assets/lunarsync.ico</ApplicationIcon><ApplicationManifest>../LunarSync/app.manifest</ApplicationManifest></PropertyGroup>
+ <ItemGroup><ProjectReference Include="../LunarSync.Core/LunarSync.Core.csproj"/><EmbeddedResource Include="../../distribution/app-package.zip" LogicalName="LunarSync.Payload.zip"/><Resource Include="../../assets/lunarsync-logo.png" Link="logo.png"/></ItemGroup>
+</Project>
