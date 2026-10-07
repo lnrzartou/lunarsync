@@ -7,9 +7,9 @@ param(
 $ErrorActionPreference = 'Stop'
 $repo = 'lnrzartou/lunarsync'
 $project = Split-Path -Parent $PSScriptRoot
-function Gh {
+function Invoke-Gh {
     param([string[]]$Arguments)
-    $result = & gh @Arguments
+    $result = & gh.exe @Arguments
     if ($LASTEXITCODE -ne 0) { throw 'GitHub a refusé une opération. Aucune publication finale effectuée par cette étape.' }
     return $result
 }
@@ -20,13 +20,13 @@ function Run-Publisher {
 }
 Push-Location $project
 try {
-    $login = Gh -Arguments @('api','user','--jq','.login')
+    $login = Invoke-Gh -Arguments @('api','user','--jq','.login')
     if ($login.Trim() -ne 'lnrzartou') { throw 'Connecte GitHub CLI au compte lnrzartou avant de publier.' }
     if (-not (Test-Path -LiteralPath $SigningKey)) { throw 'Clé privée Windows introuvable. Ne crée pas une nouvelle clé pour remplacer celle déjà distribuée.' }
     $dirty = & git status --porcelain
     if ($LASTEXITCODE -ne 0 -or $dirty) { throw 'Enregistre les changements avec git commit, puis git push, avant de publier.' }
     $commit = (& git rev-parse HEAD).Trim()
-    $remoteCommit = Gh -Arguments @('api',"repos/$repo/commits/main",'--jq','.sha')
+    $remoteCommit = Invoke-Gh -Arguments @('api',"repos/$repo/commits/main",'--jq','.sha')
     if ($remoteCommit.Trim() -ne $commit) { throw 'Le commit local doit être le commit main publié sur GitHub.' }
     [xml]$props = Get-Content -LiteralPath 'Directory.Build.props' -Raw
     if ($props.Project.PropertyGroup.Version -ne $Version) { throw 'La version demandée doit correspondre à Directory.Build.props.' }
@@ -60,8 +60,8 @@ try {
     $tracked = & git ls-files
     if ($tracked | Where-Object { $_ -match '(?i)(\.dpapi$|-private\.pem$|\.pfx$|\.p12$|\.key$|(^|/)\.env($|\.))' }) { throw 'Un fichier privé apparaît parmi les fichiers suivis : publication interrompue.' }
     Get-FileHash -LiteralPath $zip,$setup,$manifest -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  $([IO.Path]::GetFileName($_.Path))" } | Set-Content -LiteralPath $checksums
-    Gh -Arguments @('release','create',"v$Version",'--repo',$repo,'--target',$commit,'--title',"LunarSync $Version",'--notes-file',$Notes,'--draft')
-    Gh -Arguments @('release','upload',"v$Version",$zip,$setup,$manifest,$checksums,'--repo',$repo)
-    Gh -Arguments @('release','edit',"v$Version",'--repo',$repo,'--draft=false','--latest=true')
+    Invoke-Gh -Arguments @('release','create',"v$Version",'--repo',$repo,'--target',$commit,'--title',"LunarSync $Version",'--notes-file',$Notes,'--draft')
+    Invoke-Gh -Arguments @('release','upload',"v$Version",$zip,$setup,$manifest,$checksums,'--repo',$repo)
+    Invoke-Gh -Arguments @('release','edit',"v$Version",'--repo',$repo,'--draft=false','--latest=true')
     Write-Output "Publication disponible : https://github.com/$repo/releases/tag/v$Version"
 } finally { Pop-Location }
